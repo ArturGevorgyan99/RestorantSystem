@@ -16,7 +16,7 @@ export const AddMenuItem = (req,res) => {
         return res.status(400).json({error: "All fields are required"});
     }
     const menu = JSON.parse(fs.readFileSync(menuPath));
-    let id =`M${menu.length++}`;
+    let id =`M${menu.length+1}`;
     menu.push({ id, name, price, ingredients });
     fs.writeFileSync(menuPath, JSON.stringify(menu, null, 2));
     res.status(201).json({message: "Menu item added."});
