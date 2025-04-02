@@ -9,9 +9,32 @@
       "basil"
     ]
   },
+  null,
   {
     "id": "M1",
-    "name": "Pizza ",
+    "name": "Pizza Margherita",
+    "price": 10.5,
+    "ingredients": [
+      "cheese",
+      "tomato",
+      "basil"
+    ]
+  },
+  null,
+  {
+    "id": "M3",
+    "name": "Pizza Margherita",
+    "price": 10.5,
+    "ingredients": [
+      "cheese",
+      "tomato",
+      "basil"
+    ]
+  },
+  null,
+  {
+    "id": "M5",
+    "name": "Pizza Margherita",
     "price": 10.5,
     "ingredients": [
       "cheese",

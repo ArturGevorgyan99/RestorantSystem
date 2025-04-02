@@ -12,3 +12,11 @@ export const getCustomerOrders = (req, res) => {
     const customerOrders = orders.filter(order => order.customerId === customerId);
     res.json(customerOrders);
 };
+export const SetCustomer = (req,res) =>  {
+    const { name, email ,phone} = req.body;
+    const customers = JSON.parse(fs.readFileSync(customersPath));
+    let id = `C${customers.length+1}`;
+    customers.push({ id, name, email, phone });
+        fs.writeFileSync(customersPath, JSON.stringify(customers, null, 2));
+        res.status(201).json({message: "customers item added."});
+}

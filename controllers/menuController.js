@@ -13,7 +13,7 @@ export const getMenu = (req,res ) => {
 export const AddMenuItem = (req,res) => {
     const { name, price, ingredients} = req.body;
     if( !name || !price || !ingredients){
-        return res.status(400).json({error: "All fields are required"})
+        return res.status(400).json({error: "All fields are required"});
     }
     const menu = JSON.parse(fs.readFileSync(menuPath));
     let id =`M${menu.length++}`;
