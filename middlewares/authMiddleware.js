@@ -1,6 +1,5 @@
 
  const customerValidation = (req, res, next) => {
-    console.log("!!!!!!!!!!!!!");
     
     const { name, email ,phone} = req.body;
     if (!name || !email || !phone) {
