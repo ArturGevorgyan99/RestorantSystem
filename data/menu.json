@@ -1,22 +1,13 @@
 [
+  null,
   {
-    "id": "M001",
-    "name": "Пицца Маргарита",
+    "id": "M0",
+    "name": "Pizza Margherita",
     "price": 10.5,
     "ingredients": [
-      "сыр",
-      "помидор",
-      "базилик"
-    ]
-  },
-  {
-    "id": "M002",
-    "name": "Пицца Пепперони",
-    "price": 12,
-    "ingredients": [
-      "пепперони",
-      "сыр",
-      "томаты"
+      "cheese",
+      "tomato",
+      "basil"
     ]
   }
 ]

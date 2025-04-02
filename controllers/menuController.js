@@ -11,11 +11,12 @@ export const getMenu = (req,res ) => {
 }
 
 export const AddMenuItem = (req,res) => {
-    const {id, name, price, ingredients} = req.body;
-    if(!id || !name || !price || !ingredients){
+    const { name, price, ingredients} = req.body;
+    if( !name || !price || !ingredients){
         return res.status(400).json({error: "All fields are required"})
     }
     const menu = JSON.parse(fs.readFileSync(menuPath));
+    let id = `M${menu.length++}`;
     menu.push({ id, name, price, ingredients });
     fs.writeFileSync(menuPath, JSON.stringify(menu, null, 2));
     res.status(201).json({message: "Menu item added."});

@@ -4,11 +4,14 @@ import menuRoutes from "./routes/menuRoutes.js"
 import customerRoutes from "./routes/customerRoutes.js"
 import orderRoutes from "./routes/orderRoutes.js"; 
 
-const app  = express();
 dotenv.config();
+
+const app  = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
+
+
 
 app.use("/menu", menuRoutes);
 app.use("/orders", orderRoutes);
