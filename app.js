@@ -6,16 +6,13 @@ import orderRoutes from "./routes/orderRoutes.js";
 
 dotenv.config();
 
-const app  = express();
+const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-
-
-
 app.use("/menu", menuRoutes);
 app.use("/orders", orderRoutes);
 app.use("/customers", customerRoutes);
 
-app.listen(PORT, () => {console.log(`Server is running in port ${PORT}` );
+app.listen(PORT, () =>{console.log(`Server is running on port ${PORT}` );
 });

@@ -4,12 +4,10 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const menuPath = path.join (__dirname, "../data/menu.json");
-
 export const getMenu = (req,res ) => {
     const menu = JSON.parse(fs.readFileSync(menuPath));
     res.json(menu);
 }
-
 export const AddMenuItem = (req,res) => {
     const { name, price, ingredients} = req.body;
     if( !name || !price || !ingredients){
