@@ -5,9 +5,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const menuPath = path.join(__dirname, "../data/menu.json");
 const orderPath = path.join(__dirname, "../data/orders.json");
-
 let totalPrice = 0;
-
 export  const placeOrder = (req,res) => {
     const menu = JSON.parse(fs.readFileSync(menuPath));
     const orders = JSON.parse(fs.readFileSync(orderPath));
